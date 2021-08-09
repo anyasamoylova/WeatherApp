@@ -16,7 +16,7 @@ abstract class FragmentModule {
     @ContributesAndroidInjector(modules = [CityListModule::class])
     abstract fun contributeSearchFragment(): CityListFragment
 
-    @ContributesAndroidInjector(modules = [MapsModule::class])
+    @ContributesAndroidInjector()
     abstract fun contributeMapsFragment(): MapFragment
 
     @ContributesAndroidInjector(modules = [WeekForecastModule::class])

@@ -1,25 +1,21 @@
 package com.sam.weatherapp.ui
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import com.sam.weatherapp.R
 import com.sam.weatherapp.features.model.data_class.Coordinate
 import com.sam.weatherapp.features.model.data_class.WeatherDataModel
 import com.sam.weatherapp.features.presenter.WeatherInfoPresenter
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_day_forecast.*
 import kotlinx.android.synthetic.main.state_weather.*
-import kotlinx.android.synthetic.main.state_weather.view.*
 import javax.inject.Inject
 
 class DayForecastFragment : DaggerFragment(), DayForecastView {
@@ -32,7 +28,7 @@ class DayForecastFragment : DaggerFragment(), DayForecastView {
 
     @Inject
     lateinit var presenter: WeatherInfoPresenter
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
 
     private lateinit var btnWeekForecast: Button
     private lateinit var progressBar: ProgressBar

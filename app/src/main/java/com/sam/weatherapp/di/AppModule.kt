@@ -2,11 +2,7 @@ package com.sam.weatherapp.di
 
 import android.app.Application
 import android.content.Context
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.room.Room
-import com.sam.weatherapp.R
-import com.sam.weatherapp.features.adapter.CityAdapter
 import com.sam.weatherapp.room.AppDatabase
 import com.sam.weatherapp.ui.MainActivity
 import dagger.Binds

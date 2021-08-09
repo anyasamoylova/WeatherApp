@@ -43,7 +43,7 @@ class WeatherInfoModelImpl @Inject constructor(
     }
 
     //fetch weather info from network and let presenter know about results
-    override fun getWeatherInfoByCityId(cityId: Int, callback: RequestCompleteListener<WeatherResponse>) {
+    override fun getWeatherInfoByCityId(cityId: Int, callBack: RequestCompleteListener<WeatherResponse>) {
         val call: Call<WeatherResponse> = apiInterface.callApiForWeatherInfoByCityId(cityId)
         call.enqueue(object: Callback<WeatherResponse> {
             override fun onResponse(
@@ -51,14 +51,14 @@ class WeatherInfoModelImpl @Inject constructor(
                 response: Response<WeatherResponse>
             ) {
                 if (response.body() != null) {
-                    callback.onRequestSuccess(response.body()!!)
+                    callBack.onRequestSuccess(response.body()!!)
                 } else {
-                    callback.onRequestFailed(response.message())
+                    callBack.onRequestFailed(response.message())
                 }
             }
 
             override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {
-                callback.onRequestFailed(t.localizedMessage!!)
+                callBack.onRequestFailed(t.localizedMessage!!)
             }
 
         }
@@ -68,7 +68,7 @@ class WeatherInfoModelImpl @Inject constructor(
     override fun getWeatherInfoByCoordinates(
         latitude: Double,
         longitude: Double,
-        callback: RequestCompleteListener<WeatherResponseList>,
+        callBack: RequestCompleteListener<WeatherResponseList>,
     ) {
         val call: Call<WeatherResponseList> = apiInterface.callApiForWeatherInfoByCoordinates(latitude, longitude)
         call.enqueue(object: Callback<WeatherResponseList> {
@@ -77,14 +77,14 @@ class WeatherInfoModelImpl @Inject constructor(
                 response: Response<WeatherResponseList>
             ) {
                 if (response.body() != null) {
-                    callback.onRequestSuccess(response.body()!!)
+                    callBack.onRequestSuccess(response.body()!!)
                 } else {
-                    callback.onRequestFailed(response.message())
+                    callBack.onRequestFailed(response.message())
                 }
             }
 
             override fun onFailure(call: Call<WeatherResponseList>, t: Throwable) {
-                callback.onRequestFailed(t.localizedMessage!!)
+                callBack.onRequestFailed(t.localizedMessage!!)
             }
 
         }
@@ -94,7 +94,7 @@ class WeatherInfoModelImpl @Inject constructor(
     override fun getWeekWeatherInfoByCoordinates(
         latitude: Double,
         longitude: Double,
-        callback: RequestCompleteListener<WeekWeatherResponse>,
+        callBack: RequestCompleteListener<WeekWeatherResponse>,
     ) {
         val call: Call<WeekWeatherResponse> = apiInterface.callApiForWeekWeatherInfoByCoordinates(latitude, longitude)
         call.enqueue(object: Callback<WeekWeatherResponse> {
@@ -103,14 +103,14 @@ class WeatherInfoModelImpl @Inject constructor(
                 response: Response<WeekWeatherResponse>,
             ) {
                 if (response.body() != null) {
-                    callback.onRequestSuccess(response.body()!!)
+                    callBack.onRequestSuccess(response.body()!!)
                 } else {
-                    callback.onRequestFailed(response.message())
+                    callBack.onRequestFailed(response.message())
                 }
             }
 
             override fun onFailure(call: Call<WeekWeatherResponse>, t: Throwable) {
-                callback.onRequestFailed(t.localizedMessage!!)
+                callBack.onRequestFailed(t.localizedMessage!!)
             }
 
         })

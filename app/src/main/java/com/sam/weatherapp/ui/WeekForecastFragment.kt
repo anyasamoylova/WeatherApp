@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.sam.weatherapp.R
 import com.sam.weatherapp.features.adapter.WeekForecastAdapter
-import com.sam.weatherapp.features.model.data_class.WeatherDataModel
 import com.sam.weatherapp.features.model.data_class.WeekWeatherDataModel
 import com.sam.weatherapp.features.presenter.WeatherInfoPresenter
 import dagger.android.support.DaggerFragment
@@ -26,11 +25,11 @@ class WeekForecastFragment : DaggerFragment(), WeekForecastView {
     @Inject
     lateinit var weekAdapter: WeekForecastAdapter
 
-    lateinit var rvTodayForecast: RecyclerView
-    lateinit var rvWeekForecast: RecyclerView
-    lateinit var progressBar: ProgressBar
-    lateinit var weatherView: View
-    lateinit var errorView: View
+    private lateinit var rvTodayForecast: RecyclerView
+    private lateinit var rvWeekForecast: RecyclerView
+    private lateinit var progressBar: ProgressBar
+    private lateinit var weatherView: View
+    private lateinit var errorView: View
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -44,7 +44,7 @@ class WeekForecastAdapter @Inject constructor(val context: Context): RecyclerVie
 
         fun bind (weatherData: WeatherDataModel){
             tvDate.text = weatherData.dateTime
-            val iconName: String = "d${weatherData.weatherConditionIconUrl.substring(0, 2)}"
+            val iconName = "d${weatherData.weatherConditionIconUrl.substring(0, 2)}"
             ivWeatherIcon.setImageResource(context.resources.getIdentifier(iconName, "drawable", context.packageName))
             tvTemperature.text = weatherData.temperature
         }

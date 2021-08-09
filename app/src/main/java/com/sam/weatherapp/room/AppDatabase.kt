@@ -1,6 +1,5 @@
 package com.sam.weatherapp.room
 
-import android.content.Context
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.sam.weatherapp.features.model.data_class.City

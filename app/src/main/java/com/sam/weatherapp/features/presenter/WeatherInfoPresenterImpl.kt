@@ -33,7 +33,7 @@ class WeatherInfoPresenterImpl @Inject constructor(
                     pressure = "${data.main.pressure} mBar",
                     visibility = "${data.visibility/1000.0} km",
                     windSpeed = "${data.wind.speed} m/sec",
-                    weatherConditionIconUrl = "${data.weather[0].icon}",
+                    weatherConditionIconUrl = data.weather[0].icon,
                     description = data.weather[0].main
                 )
 

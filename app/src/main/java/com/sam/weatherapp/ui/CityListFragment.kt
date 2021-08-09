@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.sam.weatherapp.R
@@ -37,7 +36,6 @@ class CityListFragment : DaggerFragment(), CityListView, CoroutineScope {
     lateinit var navController: NavController
 
     private lateinit var rv: RecyclerView
-    lateinit var onFinishInterface: FragmentInterface
 
     private lateinit var job: Job
 
@@ -100,10 +98,6 @@ class CityListFragment : DaggerFragment(), CityListView, CoroutineScope {
         super.onDestroy()
         //adapter.clear()
         job.cancel()
-    }
-
-    fun setOnFinishAction(fragmentInterface: FragmentInterface) {
-        this.onFinishInterface = fragmentInterface
     }
 
     override fun onCityListFetchSuccess(cityList: MutableList<City>) {

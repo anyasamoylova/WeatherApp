@@ -8,14 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.*
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -23,13 +21,11 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.sam.weatherapp.R
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_map.*
-import javax.inject.Inject
 
 class MapFragment : DaggerFragment(), OnMapReadyCallback, GoogleMap.OnMapClickListener {
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
     private lateinit var googleMap: GoogleMap
-    lateinit var btnBack: ImageView
+    private lateinit var btnBack: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,7 +50,6 @@ class MapFragment : DaggerFragment(), OnMapReadyCallback, GoogleMap.OnMapClickLi
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        //TODO to move permission request here
         this.googleMap = googleMap
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             googleMap.isMyLocationEnabled = true

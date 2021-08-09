@@ -5,7 +5,6 @@ import com.sam.weatherapp.features.model.WeatherInfoModel
 import com.sam.weatherapp.features.model.data_class.City
 import com.sam.weatherapp.ui.CityListView
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.combineTransform
 import javax.inject.Inject
 
 class
@@ -45,7 +44,6 @@ CityListPresenterImpl @Inject constructor(
                 } else
                     view?.onCityListFetchFailure("There is no favorite cities yet")
             }
-            //TODO never be called
             override fun onRequestFailed(errorMessage: String) {
                 view?.onCityListFetchFailure(errorMessage)
             }

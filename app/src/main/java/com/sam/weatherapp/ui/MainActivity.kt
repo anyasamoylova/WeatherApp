@@ -12,13 +12,11 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.gms.location.*
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.sam.weatherapp.R
 import com.sam.weatherapp.features.adapter.CityAdapter
 import com.sam.weatherapp.ui.CityListFragment.Companion.ONLY_FAVORITE_CITIES
@@ -35,7 +33,7 @@ class MainActivity : DaggerAppCompatActivity(){
 
     @Inject
     lateinit var cityAdapter: CityAdapter
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
 
     //Google's API for location service. It provides the last known location
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient

@@ -5,8 +5,6 @@ import com.sam.weatherapp.features.presenter.WeatherInfoPresenter
 import com.sam.weatherapp.features.presenter.WeatherInfoPresenterImpl
 import com.sam.weatherapp.ui.DayForecastFragment
 import com.sam.weatherapp.ui.DayForecastView
-import com.sam.weatherapp.ui.WeekForecastFragment
-import com.sam.weatherapp.ui.WeekForecastView
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
