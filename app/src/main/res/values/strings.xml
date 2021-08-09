@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="search_city">Search city</string>
+    <string name="favorite_cities">Favorite cities</string>
+    <string name="open_map">Open map</string>
+    <string name="near_me">Near me</string>
+    <string name="view_weather">View weather</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map">Map</string>
+    <string name="wind">Wind</string>
+    <string name="separator">|</string>
+    <string name="hum">Hum</string>
+    <string name="today">Today</string>
+    <string name="week_forecast">Week forecast</string>
+    <string name="unknown_location">Location is unknown</string>
+    <string name="data_loading_error">Data loading error</string>
+</resources>

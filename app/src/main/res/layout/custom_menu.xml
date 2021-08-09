@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCustomMenu"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbarStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivActionMap"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_toolbar_map"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="31dp"
+            android:contentDescription="@string/map" />
+
+        <RelativeLayout
+            android:id="@+id/rlActionSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivActionMap"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_standard">
+
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Karpinsk"
+                android:fontFamily="@font/overpass_bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/ivActionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="500dp"
+                app:searchIcon="@drawable/ic_toolbar_search"
+                app:closeIcon="@drawable/ic_toolbar_close"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_toEndOf="@id/tvCityName"
+                android:contentDescription="@string/search_city"
+                app:iconifiedByDefault="true"
+                app:queryHint="City name" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivActionFavorite"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_toolbar_favorite"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/favorite_cities" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlToolbarBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivActionBack"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_toolbar_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:contentDescription="@string/map" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

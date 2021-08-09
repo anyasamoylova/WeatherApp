@@ -1,0 +1,92 @@
+[
+  {
+    "id": 452063,
+    "name": "Dubrovka",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 34.983971,
+      "lat": 56.997929
+    }
+  },
+  {
+    "id": 452949,
+    "name": "Udomlya",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 34.9925,
+      "lat": 57.87944
+    }
+  },
+  {
+    "id": 452960,
+    "name": "Leninskiy",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 34.085911,
+      "lat": 57.868858
+    }
+  },
+  {
+    "id": 453080,
+    "name": "Akademicheskiy",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 34.31638,
+      "lat": 57.711102
+    }
+  },
+  {
+    "id": 461699,
+    "name": "Sasovo",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 41.919861,
+      "lat": 54.353691
+    }
+  },
+  {
+    "id": 461704,
+    "name": "Novozavidovskiy",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 36.433334,
+      "lat": 56.549999
+    }
+  },
+  {
+    "id": 461705,
+    "name": "Krasnolesnyy",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 39.587719,
+      "lat": 51.880718
+    }
+  },
+  {
+    "id": 461715,
+    "name": "Malinovo",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 38.873055,
+      "lat": 55.748333
+    }
+  },
+  {
+    "id": 461720,
+    "name": "Kosterevo",
+    "state": "",
+    "country": "RU",
+    "coord": {
+      "lon": 39.61438,
+      "lat": 55.929901
+    }
+  }
+  ]

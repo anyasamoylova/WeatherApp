@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="110dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivWindIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_characteristic_wind"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tvWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewStyle"
+            android:text="@string/wind"
+            app:layout_constraintStart_toEndOf="@id/ivWindIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_large"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewStyle"
+            android:text="@string/separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="110dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivHumIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_characterictic_humidity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tvHum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewStyle"
+            android:text="@string/hum"
+            app:layout_constraintStart_toEndOf="@id/ivHumIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_large"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewStyle"
+            android:text="@string/separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

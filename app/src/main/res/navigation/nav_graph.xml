@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dayForecastFragment">
+
+    <fragment
+        android:id="@+id/dayForecastFragment"
+        android:name="com.sam.weatherapp.ui.DayForecastFragment"
+        android:label="fragment_day_forecast"
+        tools:layout="@layout/fragment_day_forecast">
+        <action
+            android:id="@+id/action_dayForecastFragment_to_cityListFragment"
+            app:destination="@id/cityListFragment" />
+        <action
+            android:id="@+id/action_dayForecastFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_dayForecastFragment_to_weekForecastFragment"
+            app:destination="@id/weekForecastFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cityListFragment"
+        android:name="com.sam.weatherapp.ui.CityListFragment"
+        android:label="fragment_city_list"
+        tools:layout="@layout/fragment_city_list" >
+        <action
+            android:id="@+id/action_cityListFragment_to_dayForecastFragment"
+            app:destination="@id/dayForecastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekForecastFragment"
+        android:name="com.sam.weatherapp.ui.WeekForecastFragment"
+        android:label="WeekForecastFragment" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.sam.weatherapp.ui.MapFragment"
+        android:label="MapFragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_dayForecastFragment"
+            app:destination="@id/dayForecastFragment" />
+    </fragment>
+</navigation>

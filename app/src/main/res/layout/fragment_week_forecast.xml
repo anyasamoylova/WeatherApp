@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            style="@style/TextViewStyle"
+            android:textSize="24sp"
+            android:fontFamily="@font/overpass_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewStyle"
+            app:layout_constraintTop_toTopOf="@id/tvToday"
+            app:layout_constraintBottom_toBottomOf="@id/tvToday"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            android:text="Sep, 12"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTodayForecastByTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvToday"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="32dp"
+            tools:listitem="@layout/card_hour_forecast"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="5" />
+
+        <TextView
+            android:id="@+id/tvWeekForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week_forecast"
+            style="@style/TextViewStyle"
+            android:textSize="24sp"
+            android:fontFamily="@font/overpass_bold"
+            app:layout_constraintTop_toBottomOf="@id/rvTodayForecastByTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintTop_toTopOf="@id/tvWeekForecast"
+            app:layout_constraintBottom_toBottomOf="@id/tvWeekForecast"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeekForecast"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintTop_toBottomOf="@id/tvWeekForecast"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="24dp"
+            tools:listitem="@layout/card_day_forecast"
+            tools:itemCount="5"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/stateDataLoadingError"
+        layout="@layout/state_data_loading_error"
+        android:visibility="gone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
