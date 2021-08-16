@@ -40,7 +40,6 @@ class MapFragment : DaggerFragment(), OnMapReadyCallback, GoogleMap.OnMapClickLi
     @Suppress("DEPRECATION")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         navController = (requireActivity().supportFragmentManager.findFragmentById(R.id.navFragment) as NavHostFragment).navController
         btnBack.setOnClickListener {
             navController.popBackStack()

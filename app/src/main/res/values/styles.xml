@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@color/purple_200</item>
         <item name="searchViewStyle">@style/AppSearchViewStyle</item>
-        <item name="android:windowBackground">@color/backgroundColor</item>
     </style>
 
     <style name="AppSearchViewStyle" parent="Widget.AppCompat.SearchView">
